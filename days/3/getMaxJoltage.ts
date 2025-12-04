@@ -1,4 +1,4 @@
-const DEBUG = false;
+const DEBUG = true;
 
 export function getMaxJoltage(inputs: string, switchCount: number): number {
   let resultIndexes: number[] = [];
@@ -21,5 +21,21 @@ export function getMaxJoltage(inputs: string, switchCount: number): number {
       }
     }
   }
-  return Number(resultIndexes.map(input).join(""));
+  let inputStr = "";
+  let caretStr = " ".repeat(inputs.length);
+  let bold = (str: string) => `\x1b[1m${str}\x1b[0m`;
+  for (let i = 0; i < inputs.length; i++) {
+    if (resultIndexes.includes(i)) {
+      inputStr += bold(inputs[i]!);
+      caretStr = caretStr.substring(0, i) + "^" + caretStr.substring(i + 1);
+    } else {
+      inputStr += inputs[i];
+    }
+  }
+  const res = Number(resultIndexes.map(input).join(""));
+  if (DEBUG) {
+    console.log(inputStr + ` => ${res}`);
+    console.log(caretStr);
+  }
+  return res;
 }

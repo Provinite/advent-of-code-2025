@@ -1,8 +1,8 @@
+import { parseInvalidIdPart1 } from "../common/parseInvalidIdPart1.js";
 import { appendNumbersAsStrings } from "./appendNumbersAsStrings.js";
-import { parseInvalidId } from "./parseInvalidId.js";
 
 export function getPreviousInvalidId(start: number) {
-  const check = parseInvalidId(start);
+  const check = parseInvalidIdPart1(start);
   if (start < 11) {
     throw new Error("No invalid IDs exist below 11");
   }

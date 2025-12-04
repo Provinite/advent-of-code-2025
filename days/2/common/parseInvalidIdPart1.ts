@@ -3,7 +3,7 @@
  * @param value
  * @returns
  */
-export function parseInvalidId(value: number):
+export function parseInvalidIdPart1(value: number):
   | {
       hasEvenLength: false;
       isInvalid: false;

@@ -1,12 +1,12 @@
+import { parseInvalidIdPart1 } from "../common/parseInvalidIdPart1.js";
 import { appendNumbersAsStrings } from "./appendNumbersAsStrings.js";
-import { parseInvalidId } from "./parseInvalidId.js";
 
 /**
  * Get the next invalid id in range [start, +inf)
  * @param start
  */
 export function getNextInvalidId(start: number) {
-  const check = parseInvalidId(start);
+  const check = parseInvalidIdPart1(start);
   if (check.isInvalid) {
     return start;
   }

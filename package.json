@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "1": "tsx ./days/1/index.ts"
+    "1": "tsx ./days/1/index.ts",
+    "2": "tsx ./days/2/naive/index.ts",
+    "3": "tsx ./days/3/index.ts"
   },
   "type": "module",
   "keywords": [],

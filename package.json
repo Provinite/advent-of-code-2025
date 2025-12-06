@@ -8,7 +8,8 @@
     "1": "tsx ./days/1/index.ts",
     "2": "tsx ./days/2/naive/index.ts",
     "3": "tsx ./days/3/index.ts",
-    "4": "tsx ./days/4/index.ts"
+    "4": "tsx ./days/4/index.ts",
+    "5": "tsx ./days/5/index.ts"
   },
   "type": "module",
   "keywords": [],

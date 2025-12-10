@@ -1,7 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 import { inputToNode } from "./inputToNode.js";
-import { printGraph } from "./printGraph.js";
 import { calculatePaths } from "./calculatePaths.js";
 
 const raw = readFileSync(join(import.meta.dirname, "input.txt")).toString();
